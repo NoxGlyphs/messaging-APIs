@@ -1,15 +1,19 @@
-# APIs-mensajeria
-Colección de 3 APIs para gestionar un sistema de mensajería. Desarrollado en python y usando los programas: neo4j, redis y mongo
+# Overview
+Collection of 3 APIs to manage a messaging system architecture. 
+Developed in Python and using Neo4j, Redis, and MongoDB for data management.
 
-### Dependencias
-Se ha proporcionado un export del entorno de conda sobre el que se ha desarrollado la práctica "environment.yml". Para importarlo:
-conda "nombre_env" create -f environment.yml
+### Dependencies
+An export of the Conda environment used for this project is provided in the file `environment.yml`. To recreate it:
 
+conda create --name <env_name> -f environment.yml
 
-### Guía de ejecución
-Todo el código se encuentra en "src" y el ejemplo de ejecución de la aplicación completa es "main.ipynb".
+### Execution Guide
+All the code is located in the `src` directory, and a full usage example can be found in `src/main.ipynb`.
 
-Para ejecutarlo lo único que puede ser necesario cambiar son las factory function de los clientes de cada SGBD, por si se tienen los servicios corriendo en puerto que no es el por defecto o se quiere usar otra base de datos.
-Además, es posible que también haya que cambiar la contraseña de neo4j ya que este pide autentificación (es el segundo campo de la tupla en el notebook).
+To run the project, you may need to modify the client factory functions for each database system, in case your services are running on non-default ports or you want to use different databases.
 
-Después en "demo_subsistemas" se prueba la api de cada subsistema. Estas contienen el CRUD y utilidades para alguna query más que se pedía en la práctica. La lógica de negocio de la aplicación esta en "services.py".
+Additionally, you might need to update the Neo4j password, as it requires authentication (it is the second value in the tuple within the notebook).
+
+In `src/demo_subsystems.ipynb`, the API of each individual subsystem is tested. These include CRUD operations and additional utilities for specific queries required in the App.
+
+The business logic of the application is implemented in `src/services.py`.
